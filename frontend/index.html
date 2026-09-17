@@ -1,1 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RouteWise</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🧭 RouteWise
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                SMART ROUTE PLANNER
+            </span>
+
+            <h1>
+                Find Your <span>Better Route.</span>
+            </h1>
+
+            <p>
+                Get a route recommendation based on
+                your travel preferences, traffic,
+                safety and fuel efficiency.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROUTE PLANNER -->
+
+    <section class="planner">
+
+        <h2>Plan Your Journey</h2>
+
+        <p class="subtitle">
+            Enter your locations and choose what matters most to you.
+        </p>
+
+
+        <div class="location-container">
+
+            <div class="input-group">
+
+                <label>📍 Starting Location</label>
+
+                <input
+                    type="text"
+                    id="source"
+                    placeholder="e.g. IILM University"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>🎯 Destination</label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="e.g. India Gate"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- PRIORITY -->
+
+        <h3>What matters most?</h3>
+
+        <div class="priority-container">
+
+            <div class="priority-card">
+
+                <div class="priority-icon">⚡</div>
+
+                <h4>Fastest</h4>
+
+                <p>Minimize travel time</p>
+
+            </div>
+
+
+            <div class="priority-card">
+
+                <div class="priority-icon">🛡️</div>
+
+                <h4>Safer</h4>
+
+                <p>Prefer safer roads</p>
+
+            </div>
+
+
+            <div class="priority-card">
+
+                <div class="priority-icon">⛽</div>
+
+                <h4>Fuel Efficient</h4>
+
+                <p>Reduce fuel usage</p>
+
+            </div>
+
+        </div>
+
+
+        <button id="findRoute">
+            🔍 Find Best Route
+        </button>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="results" id="results" style="display: none;">
+
+        <h2>Route Recommendation</h2>
+
+        <p class="subtitle">
+            Your recommended route will appear here.
+        </p>
+
+
+        <div class="result-container">
+
+            <div class="score-card">
+
+                <span>ROUTE SCORE</span>
+
+                <strong>92</strong>
+
+                <small>Excellent match</small>
+
+            </div>
+
+
+            <div class="route-info">
+
+                <h3>✨ Recommended Route</h3>
+
+                <p id="routeText">
+                    Enter your locations above.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- METRICS -->
+
+        <div class="metrics">
+
+            <div class="metric">
+
+                <span>📏</span>
+
+                <strong>-- km</strong>
+
+                <small>Distance</small>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span>⏱️</span>
+
+                <strong>-- min</strong>
+
+                <small>Travel Time</small>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span>🚦</span>
+
+                <strong>Low</strong>
+
+                <small>Traffic</small>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span>⛽</span>
+
+                <strong>Good</strong>
+
+                <small>Fuel Efficiency</small>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAP PLACEHOLDER -->
+
+        <div class="map" id="map"></div>
+
+    </section>
+
+
+    <footer>
+
+        RouteWise • Intelligent Route Recommendation
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
